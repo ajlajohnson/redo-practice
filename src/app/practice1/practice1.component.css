@@ -1,0 +1,15 @@
+.dark {
+    background-color: #111;
+    padding: 10px;
+    color: pink;
+}
+
+.light {
+    background-color: #eee;
+    padding: 10px;
+    color: pink;
+}
+
+.gray {
+    background-color: gray;
+}

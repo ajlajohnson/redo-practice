@@ -1,0 +1,12 @@
+<form #updateForm="ngForm" (ngSubmit)="updateName(updateForm)">
+
+    <label for="name"></label>
+
+    <input type="text" name="name" id="name" placeholder="Enter your name" ngModel />
+
+    <button>Submit</button>
+</form>
+
+
+
+<p>Hello {{name}} </p>

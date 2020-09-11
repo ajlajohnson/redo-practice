@@ -1,0 +1,34 @@
+<div>
+    <form #submitForm="ngForm" (ngSubmit)="sumOfNumber(submitForm)">
+        <label for="number1">Select a number</label>
+        <input type="number" id="number1" name="number1" ngModel>
+
+        <label for="number2">Select another number</label>
+        <input type="number" id="number2" name="number2" ngModel>
+
+        <button [ngClass]='{ light: toggleButton, dark: !toggleButton }' (click)="changeButton()">Add</button>
+
+        <p>Total: {{ total }} </p>
+
+        <p *ngIf="total > 0">Positive</p>
+        <p *ngIf="total < 0">Negative</p>
+        <p *ngIf="total === 0">Zero</p>
+    </form>
+</div>
+
+
+<ol>
+    <li *ngFor="let random of randomNames">
+        {{ random }}
+    </li>
+</ol>
+
+
+<div>
+    <ol>
+        <li *ngFor='let name of names' (click)="checked(name)" [ngClass]="{gray: name.checked === true}">
+            <p> {{name.text}} </p>
+            <p> {{name.checked}} </p>
+        </li>
+    </ol>
+</div>
